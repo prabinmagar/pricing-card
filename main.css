@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-table{
+    min-height: 100vh;
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.main-wrapper{
+    width: 86vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.table{
+    background: #fff;
+    text-align: center;
+    padding: 30px 0;
+    border: 1.2px solid #d7d7d7;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.table::after{
+    content: "";
+    display: block;
+    height: 4px;
+    background: rgb(90, 83, 83);
+    position: absolute;
+    bottom: -14px;
+    border-radius: 100%;
+    width: 80%;
+    filter: blur(3px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+
+.table:hover{
+    transform: translateY(-4px);
+}
+
+.table:hover::after{
+    display: block;
+}
+
+.table h2{
+    padding: 15px 0 8px 0;
+    text-transform: uppercase;
+    font-size: 27px;
+}
+
+.table p{
+    font-weight: 300;
+    text-transform: capitalize;
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+.table:nth-child(1) .price-tag{
+    background: #d6973d;
+    color: #fff;
+    margin: 25px 0;
+    padding: 12px 0;
+}
+
+.table:nth-child(2) .price-tag{
+    background: #375099;
+    color: #fff;
+    margin: 24px 0;
+    padding: 12px 0;
+}
+
+.table:nth-child(3) .price-tag{
+    background: #179688;
+    color: #fff;
+    margin: 24px 0;
+    padding: 12px 0;
+}
+
+.dollar-sign{
+    display: inline-block;
+    transform: translateY(-5px);
+}
+
+.month-text{
+    font-size: 15px;
+    display: inline-block;
+    transform: translateY(-8px);
+}
+
+.table ul li{
+    padding: 10px 0;
+    list-style: none;
+    opacity: 0.8;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.table ul li:nth-child(odd){
+    background: #f7f8f4;
+}
+
+.table button{
+    background: #d73e4d;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+    padding: 13px 30px;
+    transition: all 0.4s linear;
+    border: 1px solid #d73e4d;
+    cursor: pointer;
+}
+
+.table button:hover{
+    background: #fff;
+    color: #d73e4d;
+    border: 1px solid #d73e4d;
+}
+
+
+@media(max-width: 1170px){
+    .main-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 768px){
+    .main-wrapper{
+        grid-template-columns: 1fr;
+    }
+}
